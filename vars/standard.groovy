@@ -24,7 +24,7 @@ def call(String goToolName = 'default', String golangCiVersion = 'v1.16.2') {
             }
             stage('Code Analysis') {
                 steps {
-                    sh "curl -sfL https://install.goreleaser.com/github.com/golangci/golangci-lint.sh | sudo bash -s -- -b $GOPATH/bin $golangCiVersion"
+                    sh "curl -sfL https://install.goreleaser.com/github.com/golangci/golangci-lint.sh | sudo bash -s -- -b $GOPATH/bin"
                     sh 'sudo golangci-lint run'
                 }
             }
