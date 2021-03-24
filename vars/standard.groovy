@@ -1,4 +1,4 @@
-def call(String goToolName = 'go-1.12', String golangCiVersion = 'v1.12.5') {
+def call(String goToolName = 'default', String golangCiVersion = 'v1.12.5') {
     pipeline {
         agent any
         tools {
